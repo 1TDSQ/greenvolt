@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Header -->
+    <header class="dashboard-header">
+      <h1>Bem-vindo ao Dashboard GREEN V O L T</h1>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="dashboard-content">
+      <!-- Economia de CO2 -->
+      <section class="co2-savings">
+        <h2>Economia de CO₂</h2>
+        <table id="co2Table">
+          <thead>
+            <tr>
+              <th>Veículo</th>
+              <th>Porcentagem de Bateria</th>
+              <th>CO₂ Economizado (kg)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button id="payEnergyButton" class="btn" onclick="openPaymentModal()">Pagar Energia</button>
+      </section>
+
+      <!-- Lista de Veículos -->
+      <section class="vehicle-list">
+        <button class="btn" onclick="openModal()">Cadastrar Veículo</button>
+        <h2>Veículos Cadastrados</h2>
+        <table id="vehicleTable">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Modelo</th>
+              <th>Ano</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <!-- Status de Carregamento -->
+  <section class="charging-status">
+    <h2>Status de Carregamento</h2>
+    <select id="vehicleSelector" onchange="updateChargingDisplay()">
+      <option value="" disabled selected>Escolha um veículo</option>
+    </select>
+    <div class="battery-percentage">
+      <svg class="progress-ring" width="120" height="120">
+        <circle class="progress-ring__circle" cx="60" cy="60" r="50" stroke-width="10"></circle>
+      </svg>
+      <div class="percentage-label" id="percentageLabel">0%</div>
+    </div>
+  </section>
+
+  <!-- Modais -->
+  <div id="vehicleModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Cadastro de Veículo</h2>
+      <form id="vehicleForm" onsubmit="registerVehicle(event)">
+        <input type="text" id="vehicleName" placeholder="Nome do Veículo" required>
+        <input type="text" id="vehicleModel" placeholder="Modelo" required>
+        <input type="number" id="vehicleYear" placeholder="Ano" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePaymentModal()">&times;</span>
+      <h2>Resumo do Pagamento</h2>
+      <div id="paymentSummary"></div>
+      <button id="generateQRButton" class="btn" onclick="simulatePayment()">Gerar QR Code</button>
+      <div id="qrCodeSection" style="display: none;">
+        <img src="https://via.placeholder.com/200" alt="QR Code Fictício">
+        <p>Aguardando pagamento...</p>
+      </div>
+      <div id="paymentStatus" style="display: none;">
+        <h3>Pagamento Finalizado!</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div id="chatToggle" class="chat-toggle" onclick="toggleChat()">💬</div>
+  </footer>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
