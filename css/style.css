@@ -712,6 +712,31 @@ body {
   .social-links img:hover {
     opacity: 0.8;
   }
+  /* Botão de participantes */
+.participant-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btn-participant {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8FDB8C;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .btn-participant:hover {
+    background-color: #5a54d1;
+    transform: scale(1.05);
+  }
+  
   
     
   
