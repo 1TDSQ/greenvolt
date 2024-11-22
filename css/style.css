@@ -2,13 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f3edf7;
+    background-color: #8FDB8C;
     color: #333;
   }
   
   .container {
     max-width: 400px;
-    margin: 100px auto;
+    margin: 80px auto;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -743,6 +743,44 @@ body {
     background-color: #5a54d1;
     transform: scale(1.05);
   }
+  /* Estilo para o logotipo */
+.logo-index {
+    display: flex;
+    margin: 0 auto; 
+    width: 80px; 
+    height: auto; 
+    margin-top: 20px; /
+  }
+  
+  /* Estilo para o título principal */
+  h1 {
+    font-size: 36px; 
+    text-align: center; 
+    color: #ffffff; 
+    margin-top: 10px; 
+    font-weight: bold;
+  }
+  
+  h1 span {
+    color: #333; /* Cor para a palavra 'VOLT' */
+  }
+  
+  /* Estilo para o texto abaixo do título */
+  .texto-index {
+    font-size: 18px; 
+    text-align: center; 
+    color: #555; 
+    margin-top: 10px; 
+    padding: 0 10px; 
+    line-height: 1.6;
+    justify-content: space-around;
+  }
+  .qrcode {
+    width: 200px;
+    height: 200px;
+    object-fit: contain; /* Garante que a imagem se ajuste proporcionalmente dentro do tamanho definido */
+  }
+  
   
   
   
