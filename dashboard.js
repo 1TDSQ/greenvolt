@@ -176,10 +176,11 @@ function openPaymentModal() {
 
 // Alternar visibilidade do chat
 function toggleChat() {
-  const chatWindow = document.getElementById('chatWindow');
-  chatOpen = !chatOpen;
-  chatWindow.style.display = chatOpen ? 'block' : 'none';
-}
+    const chatWindow = document.getElementById('chatWindow');
+    chatOpen = !chatOpen;
+    chatWindow.style.display = chatOpen ? 'block' : 'none';
+  }
+  
 
 // Enviar mensagem no chat
 function sendMessage() {
