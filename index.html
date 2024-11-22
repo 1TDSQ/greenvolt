@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="tabs">
-      <button class="tab-btn active" onclick="showTab('login')">Login</button>
-      <button class="tab-btn" onclick="showTab('register')">Cadastro</button>
-    </div>
-    <div class="form-container">
-      <form id="login" class="form active" onsubmit="redirectToDashboard(event)">
-        <h2>Login</h2>
-        <input type="email" placeholder="E-mail" required>
-        <input type="password" placeholder="Senha" required>
-        <button type="submit">Entrar</button>
-      </form>
-      <form id="register" class="form">
-        <h2>Cadastro</h2>
-        <input type="text" placeholder="Nome" required>
-        <input type="email" placeholder="E-mail" required>
-        <input type="password" placeholder="Senha" required>
-        <button type="submit">Cadastrar</button>
-      </form>
-    </div>
 
-    <!-- Botão para página de participantes -->
-    <div class="participant-link">
-      <a href="participante.html" class="btn-participant">Participantes</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <img src="img/logo/logo.png" alt="GreenVolt Logo" class="logo-index">
+    <h1>GREEN <span>VOLT</span></h1>
+    <div class="container">
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('login')">Login</button>
+            <button class="tab-btn" onclick="showTab('register')">Cadastro</button>
+        </div>
+        <div class="form-container">
+            <form id="login" class="form active" onsubmit="redirectToDashboard(event)">
+                <h2>Login</h2>
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <form id="register" class="form">
+                <h2>Cadastro</h2>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Botão para página de participantes -->
+        <div class="participant-link">
+            <a href="participante.html" class="btn-participant">Participantes</a>
+        </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
